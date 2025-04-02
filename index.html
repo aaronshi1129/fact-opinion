@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts vs Opinions Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="home-page">
+            <h1>Facts vs Opinions Game</h1>
+            <div class="intro-container">
+                <div class="intro-section">
+                    <h2>How to Play</h2>
+                    <ol>
+                        <li>Read each statement carefully</li>
+                        <li>Decide if it's a Fact or an Opinion</li>
+                        <li>Click the corresponding button to answer</li>
+                        <li>Learn from the feedback and continue to the next statement</li>
+                        <li>Answer within the time limit to score points</li>
+                        <li>Build streaks and earn badges as you play!</li>
+                    </ol>
+                </div>
+                <div class="intro-section">
+                    <h2>Understanding Facts vs Opinions</h2>
+                    <div class="concept-box">
+                        <h3>Facts</h3>
+                        <p>Statements that can be proven true or false through evidence.</p>
+                        <div class="example">Example: Water boils at 100°C at sea level</div>
+                    </div>
+                    <div class="concept-box">
+                        <h3>Opinions</h3>
+                        <p>Personal beliefs, feelings, or judgments that cannot be proven.</p>
+                        <div class="example">Example: Chocolate ice cream is the best flavor</div>
+                    </div>
+                </div>
+            </div>
+            <button id="start-game-btn" class="start-btn">Start Game</button>
+        </div>
+
+        <div id="game-content" class="hidden">
+            <header>
+                <h1>Facts vs Opinions <span class="level-indicator" id="level-display">Level 1: Novice Analyst</span></h1>
+                <div class="score-container">
+                    <span>Score: <span id="score">0</span></span>
+                    <span>High Score: <span id="high-score">0</span></span>
+                </div>
+            </header>
+
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-value" id="streak-display">0</span>
+                    <span class="stat-label">Current Streak</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="best-streak-display">0</span>
+                    <span class="stat-label">Best Streak</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="game-container">
+                <div class="time-bar-container">
+                    <div class="time-bar" id="time-bar"></div>
+                </div>
+                
+                <div id="scenario-container">
+                    <p id="scenario-text"></p>
+                </div>
+
+                <div class="swot-buttons-container">
+                    <button id="fact-btn" class="fact">Fact</button>
+                    <button id="opinion-btn" class="opinion">Opinion</button>
+                </div>
+
+                <div id="feedback" class="hidden">
+                    <p id="feedback-text"></p>
+                    <button id="next-btn">Next Statement</button>
+                </div>
+            </div>
+
+            <div class="badges-container" id="badges-container">
+            </div>
+
+            <div id="rewards-container" class="hidden">
+                <h2>Achievement Unlocked!</h2>
+                <div id="reward-icon">🏆</div>
+                <p id="reward-message"></p>
+                <button id="continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://sites.google.com/view/aaronshi" target="_blank" class="footer-link">
+                <img src="https://alittlemoreenglish.weebly.com/uploads/2/6/6/3/26638990/favicon-32x32_orig.png" alt="Aaron Shi" class="footer-icon">
+            </a>
+            <span class="footer-text">Released in April 2025. Created by Aaron Shi.</span>
+        </div>
+    </footer>
+
+    <div class="streak-counter" id="streak-counter">2x Streak!</div>
+
+    <script type="module" src="config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
